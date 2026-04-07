@@ -1,22 +1,4 @@
 # MABe Challenge - Social Action Recognition in Mice
-## Complete Program Documentation
-
----
-
-## 📋 Table of Contents
-
-1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Installation & Setup](#installation--setup)
-4. [Data Structure](#data-structure)
-5. [Pipeline Components](#pipeline-components)
-6. [Feature Engineering](#feature-engineering)
-7. [Model Architecture](#model-architecture)
-8. [Training Process](#training-process)
-9. [Inference & Submission](#inference--submission)
-10. [Configuration](#configuration)
-
----
 
 ## 🎯 Overview
 
@@ -24,12 +6,7 @@
 
 The MABe (Multi-Agent Behavior) Challenge focuses on automating the recognition of social behaviors in mice using pose estimation data. The goal is to identify 30+ different behaviors from tracking data of mice in various laboratory settings.
 
-### Key Challenges
 
-1. **Cross-lab Generalization**: Different labs use different equipment and tracking systems
-2. **Temporal Dynamics**: Behaviors occur over varying time scales
-3. **Sparse Annotations**: Not all behaviors are labeled in all videos
-4. **Multi-agent Interactions**: Must track who does what to whom
 
 ### Solution Approach
 
@@ -87,61 +64,7 @@ MABe Pipeline
 
 ---
 
-## 🔧 Installation & Setup
 
-### Requirements
-
-```python
-# Core libraries
-pandas>=1.3.0
-numpy>=1.21.0
-scikit-learn>=1.0.0
-
-# Machine Learning
-lightgbm>=3.3.0
-torch>=1.9.0  # For advanced model
-
-# Data processing
-scipy>=1.7.0
-pyarrow>=5.0.0  # For parquet files
-
-# Utilities
-tqdm>=4.62.0
-```
-
-### Kaggle Environment Setup
-
-```python
-# The code is designed to run in Kaggle notebooks
-# Data paths are automatically configured for Kaggle
-
-import sys
-sys.path.append('/kaggle/input/mabe-challenge-social-action-recognition-mice')
-
-# Check GPU availability
-import torch
-print(f"CUDA available: {torch.cuda.is_available()}")
-```
-
-### Directory Structure
-
-```
-/kaggle/input/mabe-challenge-social-action-recognition-mice/
-├── train.csv                    # Training metadata
-├── test.csv                     # Test metadata
-├── train_tracking/              # Training pose data (parquet files)
-│   ├── 101686631.parquet
-│   ├── 102345678.parquet
-│   └── ...
-├── test_tracking/               # Test pose data
-│   └── ...
-├── train_annotation/            # Training labels (parquet files)
-│   ├── 101686631.parquet
-│   └── ...
-└── sample_submission.csv        # Submission format example
-```
-
----
 
 ## 📊 Data Structure
 
